@@ -1,0 +1,289 @@
+/* =======================================================
+   RESET Y ESTILOS GENERALES
+======================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =======================================================
+   COLORES PRINCIPALES
+======================================================= */
+:root {
+    --verde: #4CAF50;
+    --verde-oscuro: #3e9143;
+    --gris-fondo: #f4f4f4;
+    --gris-oscuro: #333;
+}
+
+/* =======================================================
+   HEADER Y NAVEGACIÓN
+======================================================= */
+header, 
+#header {
+    background-color: var(--verde);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 5px solid var(--verde-oscuro);
+}
+
+header h1, #header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--verde);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* =======================================================
+   HERO SECTION
+======================================================= */
+#hero {
+    background: linear-gradient(to right, var(--verde), var(--verde-oscuro));
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#hero h2 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+#hero .btn {
+    padding: 1rem 2rem;
+    background-color: #FFC107;
+    color: white;
+    border-radius: 5px;
+}
+
+#hero .btn:hover {
+    background-color: #E0A800;
+}
+
+/* =======================================================
+   BOTONES Y LINKS
+======================================================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--verde);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-oscuro);
+}
+
+a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =======================================================
+   FORMULARIOS (REGISTER + LOGIN)
+======================================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input:focus {
+    border-color: var(--verde);
+}
+
+form button {
+    background-color: var(--verde);
+}
+
+form button:hover {
+    background-color: var(--verde-oscuro);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* =======================================================
+   SECCIONES GENÉRICAS (HOME)
+======================================================= */
+section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#about {
+    background-color: #f9f9f9;
+}
+
+#lineup ul {
+    list-style: none;
+}
+
+#lineup li {
+    display: inline-block;
+    margin: 1rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* =======================================================
+   TICKETS
+======================================================= */
+#tickets .btn {
+    background-color: var(--verde);
+}
+
+#tickets .btn:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* =======================================================
+   DASHBOARD / SIDEBAR
+======================================================= */
+#container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: var(--verde);
+    color: white;
+    overflow-y: auto;
+    border-right: 5px solid var(--verde-oscuro);
+}
+
+#sidebar h2 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #7cd68e;
+}
+
+.menu-item {
+    padding: 12px;
+    border-bottom: 1px solid #7cd68e;
+}
+
+.menu-item:hover {
+    background-color: var(--verde-oscuro);
+}
+
+.sub-menu a {
+    display: block;
+    padding: 8px 15px;
+    color: #eaffea;
+}
+
+.sub-menu a:hover {
+    color: #fff;
+}
+
+/* =======================================================
+   MAIN CONTENT
+======================================================= */
+#main-content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    overflow-y: auto;
+}
+
+/* =======================================================
+   FOOTER
+======================================================= */
+footer, 
+#footer {
+    background-color: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 5px solid var(--verde-oscuro);
+}
+
+footer a, footer .social-links a {
+    color: white;
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; }
+    #sidebar { width: 100%; }
+    form { width: 90%; }
+    .container { width: 95%; }
+    #hero h2 { font-size: 2rem; }
+}
